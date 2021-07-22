@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-minlau',
   templateUrl: './minlau.component.html',
-  styleUrls: ['./minlau.component.css']
+  styleUrls: ['./minlau.component.scss']
 })
 export class MinlauComponent implements OnInit {
 

@@ -1,30 +1,30 @@
-<header >
-	<mat-toolbar>
-		<mat-toolbar-row >
-			<!--<a href="github.com/theRealCarneiro"><h1>theRealCarneiro</h1></a>-->
-			<img class="img-responsive" src="assets/images/Carneiro_Logo.png">
-			<a class="toolbar" mat-button href="https://github.com/theRealCarneiro" target="_blank">
-				theRealCarneiro 
-			</a>
-			<span style="margin: auto"></span>
-			<div fxShow="true" fxHide.lt-md="true">
-				<a class="toolbar" mat-button [routerLink]="'/home'"> Home </a>
-				<a class="toolbar" mat-button [routerLink]="'/minlau'"> Minlau </a>
-				<a class="toolbar" mat-button [routerLink]="'/dotfiles'"> Dotfiles </a>
-			</div>
-			<div fxShow="true" fxHide.gt-sm="true">
-					<mat-icon mat-button (click)="sidenav.toggle()">menu</mat-icon> 
-			</div>
-		</mat-toolbar-row>
-	</mat-toolbar>
+<mat-toolbar color=primary>
+	<img class="img-responsive" src="assets/images/Carneiro_Logo.png">
+	<span style="margin: auto" fxHide.gt-sm="true"></span>
+	<a class="toolbar" mat-button href="https://github.com/theRealCarneiro" 
+		target="_blank">
+		theRealCarneiro 
+	</a>
+	<span style="margin: auto"></span>
+	<div fxShow="true" fxHide.lt-md="true">
+		<a class="toolbar" mat-button [routerLink]="'/home'"> Home </a>
+		<a class="toolbar" mat-button [routerLink]="'/minlau'"> Minlau </a>
+		<a class="toolbar" mat-button [routerLink]="'/dotfiles'"> Dotfiles </a>
+		<a mat-icon-button (click)="dark()"><mat-icon>{{icon}}</mat-icon></a>
+	</div>
+	<div fxShow="true" fxHide.gt-sm="true">
+			<mat-icon mat-button (click)="sidenav.toggle()">menu</mat-icon> 
+	</div>
+</mat-toolbar>
 
-</header>
 <mat-sidenav-container fxFlexFill class="example-container">
-	<mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" position="end" opened="false" fxHide.gt-sm="true">
+	<mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" position="end" 
+		opened="false" fxHide.gt-sm="true">
 		<div fxLayout="column">
-			<a class="toolbar" mat-button [routerLink]="'/home'"> Home </a>
-			<a class="toolbar" mat-button [routerLink]="'/minlau'"> Minlau </a>
-			<a class="toolbar" mat-button [routerLink]="'/dotfiles'"> Dotfiles </a>
+			<a class="toolbar-sidenav" mat-button [routerLink]="'/home'"> Home </a>
+			<a class="toolbar-sidenav" mat-button [routerLink]="'/minlau'"> Minlau </a>
+			<a class="toolbar-sidenav" mat-button [routerLink]="'/dotfiles'"> Dotfiles </a>
+			<a mat-button (click)="dark()"><mat-icon>{{icon}}</mat-icon></a>
 		</div>
 	</mat-sidenav>
 
