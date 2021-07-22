@@ -1,0 +1,40 @@
+//header mat-toolbar{
+	//background: #202020;
+	//color: #f5f5f5;
+//}
+
+//mat-sidenav {
+	//background: #202020;
+	//color: #f5f5f5;
+//}
+
+.mat-button:hover{
+  color: #aeb5bb;
+}
+mat-icon-button:hover{
+  color: #aeb5bb;
+}
+
+
+header h1{
+	padding-top:10px;
+	margin: 0
+}
+
+.toolbar{
+	font-size: 18px;
+}
+
+.toolbar-sidenav{
+	font-size: 25px;
+}
+
+.img-responsive {
+	width: 35px;
+	height: 52px;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}

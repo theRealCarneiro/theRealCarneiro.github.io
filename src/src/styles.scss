@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+//@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import "~@angular/material/theming";
+@include mat-core();
+$angular-primary: mat-palette($mat-purple, 800, 100, 900);
+$angular-accent: mat-palette($mat-pink, A200, A100, A400);
+$angular-warn: mat-palette($mat-red);
+
+$angular-dark-primary: mat-palette($mat-grey, 900, 500, 900);
+$angular-dark-accent: mat-palette($mat-pink, A200, A100, A400);
+$angular-dark-warn: mat-palette($mat-red);
+$angular-default-theme: mat-light-theme(
+  (
+    color: (
+      primary: $angular-primary,
+      accent: $angular-accent,
+      warn: $angular-warn,
+    ),
+  )
+);
+
+$angular-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $angular-dark-primary,
+      accent: $angular-dark-accent,
+      warn: $angular-dark-warn,
+    ),
+  )
+);
+.darkMode {
+  @include angular-material-color($angular-dark-theme);
+}
+
+@include angular-material-theme($angular-default-theme);
+
+
+html, body { 
+	height: 100%; 
+}
+
+body { 
+	margin: 0; 
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+footer {
+	background: #000000;
+	color: #ffffff;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
