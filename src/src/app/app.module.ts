@@ -11,11 +11,17 @@ import { AppComponent } from './app.component';
 import { DotfilesComponent } from './dotfiles/dotfiles.component';
 import { MinlauComponent } from './minlau/minlau.component';
 
+import { HighlightJsModule } from 'ngx-highlight-js';
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatTableModule } from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+
 
 import { HomeComponent } from './home/home.component';
 
@@ -35,10 +41,13 @@ import { HomeComponent } from './home/home.component';
 		MatButtonModule,
 		MatSidenavModule,
 		MatIconModule,
-		MatSlideToggleModule,
+		MatDividerModule,
+		MatTableModule,
+		MatCardModule,
 
 		FormsModule, 
 		ReactiveFormsModule,
+		HighlightJsModule,
 
 		HttpClientModule,
 		FlexLayoutModule,

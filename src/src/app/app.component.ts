@@ -9,12 +9,11 @@ import { FormControl } from '@angular/forms';
 export class AppComponent implements OnInit {
   title = 'theRealCarneiro';
 
-	icon: string = 'bedtime'
-	toggleControl = new FormControl(false);
 	@HostBinding('class') className = '';
+	toggleControl = new FormControl(false);
+	icon: string = ''
 
-	dark(): void{
-			const darkClassName = 'darkMode';
+	darkModeToggle(): void{
 			if (this.icon == "brightness_5"){
 				this.icon = "bedtime";
 				this.className = 'darkMode';
@@ -26,5 +25,6 @@ export class AppComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.className = 'darkMode';
+		this.icon = 'bedtime'
 	}
 }
