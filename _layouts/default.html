@@ -1,0 +1,21 @@
+---
+layout: page
+---
+
+<script type='text/javascript'>
+   //{{ site.treco }}
+    function showHide(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+</script>
+
+<script src="/assets/js/searchArticle.js"></script>
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+{{content}}

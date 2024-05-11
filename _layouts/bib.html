@@ -1,0 +1,46 @@
+---
+---
+<table>
+    <thead>
+        <tr>
+          <th>Abstract</th>
+        </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+                {{ reference }}
+                <div id="{{key}}-materials">
+                    {% if entry.abstract %}
+                    <button data-toggle="collapse" onclick="showHide('{{key}}-abstract');">Abstract</button>
+                    {% endif %}
+
+                    <button data-toggle="collapse" onclick="showHide('{{key}}-bibtex');">BibTeX</button>
+
+                    {% if link %}
+                    <button>
+                        <a style='text-decoration: none;' target='{{link}}' href="https://alice.ufsj.edu.br/{{link}}">
+                            Download
+                        </a>
+                    </button>
+                    {% endif %}
+                    {% if entry.doi %}
+                    <button>
+                        <a style='text-decoration: none;' target='{{link}}' href="http://dx.doi.org/{{entry.doi}}">
+                            DOI
+                        </a>
+                    </button>
+                    {% endif %}
+
+
+                  {% if entry.abstract %}
+                  <p id="{{key}}-abstract" class="collapse">{{entry.abstract}}</p>
+                  {% endif %}
+
+                  <pre id="{{key}}-bibtex" class="collapse">{{entry.bibtex}}</pre>
+
+                </div>
+            </td>
+        </tr>
+      </tbody>
+  </table>

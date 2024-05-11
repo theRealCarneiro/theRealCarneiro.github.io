@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<article class="repo">
+  <h1>{{ page.name }}</h1>
+  <p><strong>Description:</strong> {{ page.description }}</p>
+  <p><strong>Link:</strong> <a href="{{ page.link }}">{{ page.link }}</a></p>
+
+	<div class="repo-readme" id="repo-readme"></div>
+
+	<script>
+		fetch('https://raw.githubusercontent.com/Lethal-Org/{{ page.name }}/main/README.md')
+			.then(response => response)
+			.then(data => {
+				// Decode Base64 encoded content from GitHub API response
+				const decodedContent = atob(data.content);
+
+				// Convert fetched Markdown content to HTML
+				const htmlContent = '{{ ' + decodedContent + ' | markdownify }}';
+
+				// Display the README content as HTML
+				//document.getElementById('repo-readme').innerHTML = htmlContent;
+			})
+			.catch(error => {
+				console.error('Error fetching README:', error);
+				document.getElementById('repo-readme').innerHTML = '<p>Failed to fetch README.</p>';
+			});
+	</script>
+
+  <!--<div class="repo-content">-->
+		<!--{{ content }}-->
+  <!--</div>-->
+</article>
