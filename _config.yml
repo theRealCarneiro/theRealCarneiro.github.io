@@ -41,7 +41,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-scholar
-  # - jekyll-seo-tag
+  - jekyll-seo-tag
 
 header_pages:
   - index.md
