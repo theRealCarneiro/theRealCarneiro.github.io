@@ -1,30 +1,40 @@
 ---
 title: Repos
-layout: default
 permalink: /repos/
+layout: default
 ---
 
 <div class="repos">
-  <!-- {%- if page.title -%} -->
-  <!--   <h1 class="page-heading">{{ page.title }}</h1> -->
-  <!-- {%- endif -%} -->
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
 
 	{%- if site.repos.size > 0 -%}
-	{%- assign repos = site.repos | sort: 'name' -%}
-		<h2 class="repo-list-heading">{{ page.list_title | base: "Repositories" }}</h2>
-		<ul class="repo-list">
+	{%- assign repos = site.repos -%}
+
+        <hr class='block-separator'>
+
+        {%- for repo in repos reversed -%}
+
+            <div class="repos-container">
+
+                <div class="container-info">
+                    <h2 id="{{ repo.name | slugify }}-title" class="list-title">{{ repo.name }}</h2>
+                    <i id="{{ repo.name | slugify }}-icon" class="fa-brands fa-github fa-xl"></i>
+                    <a id="{{ repo.name | slugify }}-link" class='link' href="{{ repo.link }}">therealcarneiro/{{ repo.name | slugify }}</a>
+                    <p id="{{ repo.name | slugify }}-year"> {{ repo.year }} </p>
+                    
+                </div>
+
+                <div class="container-description">
+                    <p id="{{ repo.name | slugify }}-description" class="quote">{{ repo.description }}</p>
+                </div>
+
+            </div>
+
             <hr class='block-separator'>
-			{%- for repo in repos -%}
-					<h3>
-						<a class="repo-link" href="{{ repo.url }}">
-							{{ repo.title | escape }}
-						</a>
-					</h3>
-					<p>{{ repo.description }}</p>
-                <hr class='block-separator'>
-			{%- endfor -%}
-		</ul>
+
+        {%- endfor -%}
 	{%- endif -%}
 
 </div>
-

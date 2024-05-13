@@ -1,3 +1,8 @@
+function showHide(id) {
+	var e = document.getElementById(id);
+	e.style.display = e.style.display == 'block' ? 'none' : 'block';
+}
+
 function searchArticle() {
     var input = document.getElementById("inputSearch");
     var filter = input.value.toUpperCase();
@@ -29,3 +34,4 @@ function searchArticle() {
         }
     }
 }
+

@@ -1,12 +1,11 @@
 ---
-layout: default
 title: About Me
 permalink: /about/
-test: sim
+layout: default
 ---
 
 <div class="container">
-  <img src="/assets/images/profile.png" class="profile_img" />
+  <img src="/assets/images/profile.png" class="profile-img" />
 
     <p class="profile_text">
         {{site.description}}

@@ -1,21 +1,22 @@
 ---
-layout: page
 ---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<script type='text/javascript'>
-   //{{ site.treco }}
-    function showHide(id) {
-       var e = document.getElementById(id);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-    }
-</script>
+  {%- include head.html -%}
 
-<script src="/assets/js/searchArticle.js"></script>
+  <body>
 
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    {%- include header.html -%}
 
-{{content}}
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+	</body>
+
+</html>

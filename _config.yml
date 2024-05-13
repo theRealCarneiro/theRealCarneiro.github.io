@@ -41,6 +41,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-scholar
+  # - jekyll-seo-tag
 
 header_pages:
   - index.md
@@ -60,10 +61,12 @@ minima:
 collections:
   repos:
     output: true
+    sort_by: year
     permalink: /:collection/:name
 
   education:
     output: true
+    sort_by: start_year
     permalink: /:collection/:name
 
 scholar:

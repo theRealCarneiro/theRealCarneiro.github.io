@@ -106,9 +106,11 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  jekyll
   jekyll-feed
   jekyll-remote-theme
   jekyll-scholar
+  jekyll-seo-tag
   json
   minima!
 
