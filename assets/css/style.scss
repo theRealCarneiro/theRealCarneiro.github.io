@@ -2,10 +2,10 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import 'minima/custom-styles'
-// @import
-// 	"minima/skins/{{ site.minima.skin | default: 'classic' }}",
-// 	"minima/initialize";
+// @import 'minima/custom-styles'
+@import
+	"minima/skins/{{ site.minima.skin | default: 'classic' }}",
+	"minima/initialize";
 
 // hr.block-separator {
 // 	border-top: 3px dashed #222426;
