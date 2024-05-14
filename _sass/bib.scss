@@ -7,3 +7,20 @@
 	background-color: #222;
 }
 
+ol.bibliography li {
+	list-style-type: none;
+	// border-bottom: 3px dashed #222426;
+}
+
+ol.bibliography {
+	border-top: 3px dashed #222426;
+	padding-top: 30px;
+	margin-top: 30px;
+}
+
+h2.bibliography {
+	// list-style-type: none;
+	font-weight: 700;
+	// border-top: 3px dashed #222426;
+	padding-top: 10px;
+}
