@@ -18,9 +18,11 @@
 .site-header {
 	border-top: none;
 	border-bottom: none;
+	// background-color: var(--minima-background-color);
+	// background-color: solid black;
+	// filter: brightness(150%);
 	// border-top: 5px solid var(--minima-border-color-03);
-	// border-bottom: 1px solid var(--minima-border-color-01);
-	filter: brightness(50%);
+	border-bottom: 1px solid var(--minima-border-color-01);
 	min-height: 55.95px;
 	line-height: 54px;
 	position: relative;

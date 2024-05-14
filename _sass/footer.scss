@@ -15,3 +15,11 @@
 .p-name, .u-email {
 	font-style: italic;
 }
+
+.site-footer {
+	border-top: 1px solid var(--minima-border-color-01);
+	// background-color: var(--minima-background-color);
+	// filter: brightness(150%);
+	// border-top: none;
+	padding: 30px 0;
+}
