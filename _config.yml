@@ -44,11 +44,11 @@ plugins:
   - jekyll-seo-tag
 
 header_pages:
-  - index.md
-  - about.md
-  - publications.md
-  - education.md
-  - repos.md
+  - pages/index.html
+  - pages/about.html
+  - pages/publications.html
+  - pages/education.html
+  - pages/repos.html
 
 remote_theme: jekyll/minima
 minima:
@@ -71,10 +71,12 @@ collections:
 
 scholar:
   #Checkout this github: https://github.com/citation-style-language/styles
-  style: mystyle.csl #apa  #chicago-fullnote-bibliography #apa
-  # style: chicago-fullnote-bibliography #apa
-  # style: modern-language-association
-  locale: en
+  # style: mystyle.csl #apa  #chicago-fullnote-bibliography #apa
+  style: assets/acm.csl #apa  #chicago-fullnote-bibliography #apa
+  # style: apa
+  # style: associacao-brasileira-de-normas-tecnicas-ufmg-face-full
+  # style: association-for-computing-machinery
+  # locale: en
 
   sort_by: year, month
   order: descending # ascending

@@ -34,8 +34,13 @@ button {
 }
 
 hr.block-separator {
+	border: none;
 	border-top: 3px dashed #222426;
 	color: transparent;
+}
+
+hr.block-spacer {
+	border: none;
 }
 
 .wrapper {
@@ -44,4 +49,8 @@ hr.block-separator {
 	margin-left: auto;
 	padding-right: 15px;
 	padding-left: 15px;
+}
+
+h1.page-heading {
+	margin-bottom: 30px;
 }

@@ -10,7 +10,7 @@ layout: default
   {%- endif -%}
 
 	{%- if site.education.size > 0 -%}
-	{%- assign education = site.education | sort: 'year' -%}
+        {%- assign education = site.education | sort: 'year' -%}
 
         <hr class='block-separator'>
 
@@ -31,6 +31,7 @@ layout: default
 
             </div>
 
+            <!-- <hr class='block-spacer'> -->
             <hr class='block-separator'>
 
         {%- endfor -%}

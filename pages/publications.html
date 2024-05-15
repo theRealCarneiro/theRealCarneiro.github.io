@@ -4,6 +4,8 @@ layout: default
 permalink: /publications/
 ---
 
+<h1 class="page-heading">{{ page.title }}</h1>
+
 <div>
     <input type="text" id="inputSearch" onkeyup="searchArticle();" placeholder="Search...">
 </div>
@@ -11,4 +13,5 @@ permalink: /publications/
 
 <div id="article">
     {% bibliography %}
+
 </div>
