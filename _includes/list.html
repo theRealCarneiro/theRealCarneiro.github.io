@@ -1,0 +1,33 @@
+<div class="list-container">
+
+	<div class="container-left {{ include.name | slugify }}-info">
+			{%- if include.title -%}
+				<h2 id='{{ include.title | slugify }}-institution' class="list-title">{{ include.title }}</h2>
+			{%- endif -%}
+
+			{%- if include.subtitle -%}
+				<p class="list-p list-subtitle" id='{{ include.title | slugify }}-title'><b>{{ include.subtitle }}</b></p>
+			{%- endif -%}
+
+			{%- if include.subsubtitle -%}
+				<p class="list-p list-subsubtitle" id='{{ include.title | slugify }}-program'>{{ include.subsubtitle }}</p>
+			{%- endif -%}
+
+			{%- if include.faicon -%}
+				<i id="{{ include.title | slugify }}-icon" class="{{ include.faicon }} list-icon"></i>
+			{%- endif -%}
+
+			{%- if include.url -%}
+				<a id="{{ include.title | slugify }}-url" class='list-link' href="{{ include.url }}">{{ include.url_pretty }}</a>
+			{%- endif -%}
+
+			{%- if include.date -%}
+				<p class="list-p list-date" id='{{ include.title | slugify }}-year'>{{ include.date }}</p>
+			{%- endif -%}
+		</div>
+
+		<div class="container-right {{ include.name | slugify }}-description">
+				<p class="list-p" id='{{include.title | slugify }}-description' class="quote">{{ include.info }}</p>
+		</div>
+
+</div>

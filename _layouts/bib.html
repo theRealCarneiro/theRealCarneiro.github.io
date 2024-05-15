@@ -5,34 +5,34 @@
 {{ reference }}
 
 <div class="bib-entry" id="{{key}}-materials">
-		{% if entry.abstract %}
+		{%- if entry.abstract -%}
 		<button class="button" data-toggle="collapse" onclick="showHide('{{key}}-abstract');">Abstract</button>
-		{% endif %}
+		{%- endif -%}
 
 		<button class="button" data-toggle="collapse" onclick="showHide('{{key}}-bibtex');">BibTeX</button>
 
-		{% if link %}
+		{%- if link -%}
 		<button class="button">
-			<a style='text-decoration: none;' target='{{link}}' href="{{ site.url }}/{{link}}">
+			<a style='text-decoration: none;' target='{{link}}' href="{%- link {{ link }} -%} ">
 				Download
 			</a>
 		</button>
-		{% endif %}
+		{%- endif -%}
 
-		{% if entry.doi %}
+		{%- if entry.doi -%}
 		<button class="button">
-				<a style='text-decoration: none;' target='{{link}}' href="http://dx.doi.org/{{entry.doi}}">
+				<a style='text-decoration: none;' target='{{link}}' href="http://dx.doi.org/{{ entry.doi }}">
 						DOI
 				</a>
 		</button>
-		{% endif %}
+		{%- endif -%}
 
 
-	{% if entry.abstract %}
-	<p id="{{key}}-abstract" class="collapse">{{entry.abstract}}</p>
-	{% endif %}
+	{%- if entry.abstract -%}
+	<p id="{{key}}-abstract" class="collapse">{{ entry.abstract }}</p>
+	{%- endif -%}
 
-	<pre id="{{key}}-bibtex" class="collapse">{{entry.bibtex}}</pre>
+	<pre id="{{key}}-bibtex" class="collapse">{{ entry.bibtex }}</pre>
 
 </div>
 <hr class='block-separator'>

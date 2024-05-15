@@ -10,31 +10,29 @@ layout: default
   {%- endif -%}
 
 	{%- if site.repos.size > 0 -%}
-	{%- assign repos = site.repos -%}
 
-        <hr class='block-separator'>
+		<hr class='block-separator'>
 
-        {%- for repo in repos reversed -%}
+		{%- assign repos = site.repos -%}
+		{%- for repo in repos reversed -%}
 
-            <div class="repos-container">
+			{%- capture url_pretty -%}
+				therealcarneiro/{{ repo.name | slugify }}
+			{%- endcapture -%}
 
-                <div class="container-info">
-                    <h2 id="{{ repo.name | slugify }}-title" class="list-title">{{ repo.name }}</h2>
-                    <i id="{{ repo.name | slugify }}-icon" class="fa-brands fa-github fa-xl"></i>
-                    <a id="{{ repo.name | slugify }}-link" class='link' href="{{ repo.link }}">therealcarneiro/{{ repo.name | slugify }}</a>
-                    <p id="{{ repo.name | slugify }}-year"> {{ repo.year }} </p>
-                    
-                </div>
+			{%- include list.html
+				name='repos'
+				title=repo.name
+				faicon='fa-brands fa-github fa-xl'
+				url=repo.link
+				url_pretty=url_pretty
+				date=repo.year
+				info=repo.description
+			-%}
 
-                <div class="container-description">
-                    <p id="{{ repo.name | slugify }}-description" class="quote">{{ repo.description }}</p>
-                </div>
+			<hr class='block-separator'>
 
-            </div>
-
-            <hr class='block-separator'>
-
-        {%- endfor -%}
+		{%- endfor -%}
 	{%- endif -%}
 
 </div>

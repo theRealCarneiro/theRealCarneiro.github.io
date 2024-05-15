@@ -6,35 +6,27 @@ layout: default
 
 <div class="education">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+		<h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
 	{%- if site.education.size > 0 -%}
-        {%- assign education = site.education | sort: 'year' -%}
+		<hr class='block-separator'>
 
-        <hr class='block-separator'>
+		{%- assign education = site.education | sort: 'year' -%}
+		{%- for degree in education reversed -%}
 
-        {%- for degree in education reversed -%}
+			{%- include list.html
+				name='education'
+				title=degree.institution
+				subtitle=degree.title
+				subsubtitle=degree.program
+				date=degree.year
+				info=degree.description
+			-%}
 
-            <div class="list-container">
+			<hr class='block-separator'>
 
-                <div class="container-left">
-                    <h2 id='{{degree.title | slugify }}-institution' class="list-title">{{ degree.institution }}</h2>
-                    <p id='{{ degree.title | slugify }}-title'><b>{{ degree.title }}</b></p>
-                    {%- if degree.program -%} <p id='{{ degree.title | slugify }}-program'>{{ degree.program }}</p> {%- endif -%}
-                    <p id='{{ degree.title | slugify }}-year'>{{ degree.year }}</p>
-                </div>
-
-                <div class="container-right">
-                    <p id='{{degree.title | slugify }}-description' class="quote">{{ degree.description }}</p>
-                </div>
-
-            </div>
-
-            <!-- <hr class='block-spacer'> -->
-            <hr class='block-separator'>
-
-        {%- endfor -%}
+		{%- endfor -%}
 	{%- endif -%}
 
 </div>

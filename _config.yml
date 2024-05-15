@@ -50,6 +50,8 @@ header_pages:
   - pages/education.html
   - pages/repos.html
 
+collections_dir: collections
+
 remote_theme: jekyll/minima
 minima:
   skin: auto
@@ -83,7 +85,7 @@ scholar:
   group_by: year
   group_order: descending # ascending
 
-  source: ./_bib
+  source: collections/_bib
   repository: papers
   bibliography: "*.bib"
   bibliography_template: bib #_layout/bib.html
