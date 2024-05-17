@@ -74,7 +74,7 @@ collections:
 scholar:
   #Checkout this github: https://github.com/citation-style-language/styles
   # style: mystyle.csl #apa  #chicago-fullnote-bibliography #apa
-  style: assets/acm.csl #apa  #chicago-fullnote-bibliography #apa
+  style: assets/csl/acm.csl #apa  #chicago-fullnote-bibliography #apa
   # style: apa
   # style: associacao-brasileira-de-normas-tecnicas-ufmg-face-full
   # style: association-for-computing-machinery

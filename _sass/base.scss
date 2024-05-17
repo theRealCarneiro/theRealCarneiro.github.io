@@ -1,3 +1,52 @@
+body {
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	overflow-wrap: break-word;
+
+}
+
+.page-content {
+  padding: $spacing-unit 0;
+  flex: 1 0 auto;
+}
+
+.wrapper {
+	// flex: 1;
+	max-width: calc(80% - (30px));
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+
+  &:visited {
+    color: var(--color-link-visited);
+  }
+
+  &:hover {
+    color: var(--color-foreground);
+    text-decoration: underline;
+  }
+
+  .social-media-list &:hover {
+    text-decoration: none;
+
+    .username {
+      text-decoration: underline;
+    }
+  }
+}
+
 input {
 	border-radius: 5px;
 	font-size: 17px;
@@ -11,44 +60,43 @@ input {
 }
 
 button {
-  // background-color: white;
-  // color: #333333;
-  border-radius: 8px;
-  border-width: 0;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  margin-top: 10px;
-  padding: 10px 12px;
-  text-align: center;
-  transition: all 200ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+	background-color: var(--color-button);
+	color: var(--color-button-text);
+	border-radius: 8px;
+	border-width: 0;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	list-style: none;
+	margin-right: 5px;
+	margin-top: 10px;
+	padding: 10px 12px;
+	text-align: center;
+	transition: all 200ms;
+	vertical-align: baseline;
+	white-space: nowrap;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
 }
 
 hr.block-separator {
 	border: none;
-	border-top: 3px dashed #222426;
-	color: transparent;
+	border-top: 3px dashed var(--color-separator);
+	margin: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	// color: transparent;
 }
 
 hr.block-spacer {
-	border: none;
-}
-
-.wrapper {
-	max-width: calc(80% - (30px));
-	margin-right: auto;
-	margin-left: auto;
-	padding-right: 15px;
-	padding-left: 15px;
+	// border: none;
+	color: var(--color-separator);
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 h1.page-heading {

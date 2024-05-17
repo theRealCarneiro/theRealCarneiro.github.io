@@ -10,7 +10,8 @@ layout: default
   {%- endif -%}
 
 	{%- if site.education.size > 0 -%}
-		<hr class='block-separator'>
+		<!-- <hr class='block-separator'> -->
+		<hr class='block-spacer'>
 
 		{%- assign education = site.education | sort: 'year' -%}
 		{%- for degree in education reversed -%}
@@ -24,7 +25,7 @@ layout: default
 				info=degree.description
 			-%}
 
-			<hr class='block-separator'>
+			<hr class='block-spacer'>
 
 		{%- endfor -%}
 	{%- endif -%}

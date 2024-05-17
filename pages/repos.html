@@ -11,7 +11,8 @@ layout: default
 
 	{%- if site.repos.size > 0 -%}
 
-		<hr class='block-separator'>
+		<!-- <hr class='block-separator'> -->
+			<hr class='block-spacer'>
 
 		{%- assign repos = site.repos -%}
 		{%- for repo in repos reversed -%}
@@ -30,7 +31,8 @@ layout: default
 				info=repo.description
 			-%}
 
-			<hr class='block-separator'>
+			<!-- <hr class='block-separator'> -->
+			<hr class='block-spacer'>
 
 		{%- endfor -%}
 	{%- endif -%}

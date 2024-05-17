@@ -1,0 +1,37 @@
+$spacing-unit: 30px !default;
+:root {
+	--color-black: #000;
+	--color-white: #fff;
+	--color-grey: #333;
+	--color-light-grey: #666;
+	--color-red: #f00;
+	--color-green: #0f0;
+	--color-yellow: #ff0;
+	--color-blue: #79b8ff;
+	--color-magenta: #f0f;
+	--color-purple: #f0f;
+	--color-cyan: #0ff;
+
+	--color-foreground: var(--color-black);
+	--color-background: var(--color-white);
+	--color-separator: var(--color-light-grey);
+	--color-link: var(--color-blue);
+	--color-link-visited: var(--color-blue);
+	--color-button: var(--color-foreground);
+	--color-button-text: var(--color-background);
+	--color-brand: var(--color-light-grey);
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Re-assign previous variables */
+	:root {
+		--color-foreground: var(--color-white);
+		--color-background: var(--color-black);
+		--color-separator: var(--color-grey);
+		--color-link: var(--color-blue);
+		--color-link-visited: var(--color-blue);
+		--color-button: var(--color-white);
+		--color-button-text: var(--color-black);
+		--color-brand: var(--color-foreground);
+	}
+}
