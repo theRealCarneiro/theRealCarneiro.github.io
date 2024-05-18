@@ -35,10 +35,8 @@ github_username: theRealCarneiro
 
 # Build settings
 
-markdown: kramdown
-
 plugins:
-  - jekyll-remote-theme
+  # - jekyll-remote-theme
   - jekyll-feed
   - jekyll-scholar
   - jekyll-seo-tag
@@ -52,7 +50,7 @@ header_pages:
 
 collections_dir: collections
 
-remote_theme: jekyll/minima
+# remote_theme: jekyll/minima
 minima:
   skin: auto
   social_links:

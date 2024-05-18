@@ -83,6 +83,7 @@
 
 	input ~ .trigger {
 		clear: both;
+		border: 0px;
 		display: none;
 	}
 
@@ -122,6 +123,11 @@
 
 		input ~ .trigger {
 			display: block;
+			border: 0px;
+		}
+		input:checked ~ .trigger {
+			display: block;
+			border: 0px;
 		}
 
 		.page-link {
