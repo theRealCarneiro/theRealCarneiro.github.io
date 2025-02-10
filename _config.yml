@@ -73,7 +73,7 @@ collections:
 
 scholar:
   # style: assets/csl/acm.csl #apa  #chicago-fullnote-bibliography #apa
-  style: _includes/csl/abnt.csl
+  style: _includes/csl/acm.csl
 
   sort_by: year, month
   order: descending # ascending

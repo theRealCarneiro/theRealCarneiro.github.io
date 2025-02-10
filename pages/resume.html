@@ -6,11 +6,22 @@ layout: default
 
 <div class="container">
 	<div>
-		<h1>{{site.author.name}}<h1>
-		<h4>{{site.author.email}}<h4>
-		{%- if include.included == true -%}
-		<h4>{{site.author.phone}}<h4>
-		{%- endif -%}
+		<div class="list-container">
+			<div class="container-left">
+				<h1>{{site.author.name}}<h1>
+				<h4>{{site.author.email}}<h4>
+				{%- if include.included == true -%}
+				<h4>{{site.author.phone}}<h4>
+				{%- endif -%}
+			</div>
+
+			<div class="container-left">
+				<h1>Programming Languages<h1>
+				{%- for lang in site.data.languages -%}
+				{{ lang }}
+				{%- endfor -%}
+			</div>
+		</div>
 
 		<h1 class="page-heading">Education</h1>
 		{% include_relative education.html included=true %}

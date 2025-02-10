@@ -34,6 +34,9 @@
     A Docker Compose manager that eliminates the need to navigate into project directories. It also includes basic shell completions for Bash and Zsh.
   link: "https://github.com/theRealCarneiro/compose"
   year: 2024
+  tags:
+    - relevant
+    - Open Source
   layout: repo
   languages:
     - Shell
@@ -52,6 +55,9 @@
     Minlau is a Bash-based tool that provides a user-friendly command-line interface (CLI) for launching Wine applications and managing Wine prefixes seamlessly.
   link: "https://github.com/theRealCarneiro/minlau"
   year: 2021
+  tags:
+    - relevant
+    - Open Source
   layout: repo
   languages:
     - Shell
