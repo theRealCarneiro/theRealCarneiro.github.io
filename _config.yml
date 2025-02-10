@@ -20,10 +20,10 @@
 
 author:
   name: Gabriel Carneiro
-  email: therealcarneiro@gmail.com
+  email: gabriel.chaves.carneiro@gmail.com
 
 title: Gabriel Carneiro
-email: therealcarneiro@gmail.com
+email: gabriel.chaves.carneiro@gmail.com
 description: >-
   I completed my Computer Science degree at UFSJ and I'm currently pursuing my master's.
   Outside of my academic journey, I'm deeply involved in open-source projects, particularly those centered on Linux.
@@ -70,13 +70,8 @@ collections:
     permalink: /:collection/:name
 
 scholar:
-  #Checkout this github: https://github.com/citation-style-language/styles
-  # style: mystyle.csl #apa  #chicago-fullnote-bibliography #apa
-  style: assets/csl/acm.csl #apa  #chicago-fullnote-bibliography #apa
-  # style: apa
-  # style: associacao-brasileira-de-normas-tecnicas-ufmg-face-full
-  # style: association-for-computing-machinery
-  # locale: en
+  # style: assets/csl/acm.csl #apa  #chicago-fullnote-bibliography #apa
+  style: _includes/csl/abnt.csl
 
   sort_by: year, month
   order: descending # ascending
@@ -86,7 +81,7 @@ scholar:
   source: collections/_bib
   repository: papers
   bibliography: "*.bib"
-  bibliography_template: bib #_layout/bib.html
+  bibliography_template: bib
 
   replace_strings: true
   join_strings:    true
@@ -95,19 +90,6 @@ scholar:
   details_link:   Details
   query: "@*"
 
-  #  - { platform: devto,          user_url: "https://dev.to/jekyll" }
-  #  - { platform: dribbble,       user_url: "https://dribbble.com/jekyll" }
-  #  - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
-  #  - { platform: flickr,         user_url: "https://www.flickr.com/photos/jekyll" }
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/

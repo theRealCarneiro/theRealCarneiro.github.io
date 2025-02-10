@@ -1,0 +1,11 @@
+- name: Python
+- name: C
+- name: C++
+- name: Java
+- name: Shell
+- name: Javascript
+- name: Typescript
+- name: PHP
+- name: C#
+- name: HTML
+- name: Jekyll

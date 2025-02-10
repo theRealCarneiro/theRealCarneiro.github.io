@@ -1,0 +1,12 @@
+---
+permalink: /assets/language-icons.svg
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+{% comment %}
+{% endcomment %}
+{%- for entry in site.data.langs -%}
+  {%- assign symbol_id = entry.name -%}
+	{%- include lang_symbol.html key = symbol_id -%}
+{%- endfor -%}
+</svg>

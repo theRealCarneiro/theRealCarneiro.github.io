@@ -1,33 +1,56 @@
 <div class="list-container">
 
 	<div class="container-left {{ include.name | slugify }}-info">
+		<div>
 			{%- if include.title -%}
-				<h2 id='{{ include.title | slugify }}-institution' class="list-title">{{ include.title }}</h2>
+				<h2 id='{{ include.title | slugify }}-institution' class="list-title">{{ include.title }}&nbsp;</h2>
 			{%- endif -%}
-
-			{%- if include.subtitle -%}
-				<p class="list-p list-subtitle" id='{{ include.title | slugify }}-title'><b>{{ include.subtitle }}</b></p>
-			{%- endif -%}
-
-			{%- if include.subsubtitle -%}
-				<p class="list-p list-subsubtitle" id='{{ include.title | slugify }}-program'>{{ include.subsubtitle }}</p>
-			{%- endif -%}
-
-			{%- if include.faicon -%}
-				<i id="{{ include.title | slugify }}-icon" class="{{ include.faicon }} list-icon"></i>
-			{%- endif -%}
-
-			{%- if include.url -%}
-				<a id="{{ include.title | slugify }}-url" class='list-link' href="{{ include.url }}">{{ include.url_pretty }}</a>
-			{%- endif -%}
-
-			{%- if include.date -%}
-				<p class="list-p list-date" id='{{ include.title | slugify }}-year'>{{ include.date }}</p>
+			{%- if include.languages -%}
+				{%- for lang in repo.languages -%}
+				<svg id="{{ include.title | slugify }}-{{lang}}-icon" class="lang-icon" width=24 height=24 overflow="visible">
+						<use xlink:href="{{- '/assets/language-icons.svg#' | append: lang | relative_url -}}"></use>
+					</svg>
+				{%- endfor -%}
 			{%- endif -%}
 		</div>
 
-		<div class="container-right {{ include.name | slugify }}-description">
-				<p class="list-p" id='{{include.title | slugify }}-description' class="quote">{{ include.info }}</p>
-		</div>
+		{%- if include.subtitle -%}
+			<p class="list-p list-subtitle" id='{{ include.title | slugify }}-title'><b>{{ include.subtitle }}</b></p>
+		{%- endif -%}
+
+		{%- if include.gpa -%}
+			<p class="list-p list-subtitle" id='{{ include.title | slugify }}-title'><b>GPA: {{ include.gpa }}</b></p>
+		{%- endif -%}
+
+		{%- if include.subsubtitle -%}
+			<p class="list-p list-subsubtitle" id='{{ include.title | slugify }}-program'>{{ include.subsubtitle }}</p>
+		{%- endif -%}
+
+		{%- if include.faicon -%}
+			<i id="{{ include.title | slugify }}-icon" class="{{ include.faicon }} list-icon"></i>
+		{%- endif -%}
+
+		{%- if include.url -%}
+			<a id="{{ include.title | slugify }}-url" class='list-link' href="{{ include.url }}">{{ include.url_pretty }}</a>
+		{%- endif -%}
+
+		{%- if include.date -%}
+			<p class="list-p list-date" id='{{ include.title | slugify }}-year'>{{ include.date }}</p>
+		{%- endif -%}
+
+	</div>
+
+	<div class="container-right {{ include.name | slugify }}-description">
+		<p class="list-p" id='{{include.title | slugify }}-description' class="quote">{{ include.info }}</p>
+
+		{%- if include.comments -%}
+			<ul style="margin: 0; padding: 0; padding-top: 10px; list-style-position: inside">
+			{%- for comment in include.comments -%}
+				<li class="list-p" id='{{ include.title | slugify }}-program'>{{ comment }}</p>
+			{%- endfor -%}
+			</ul>
+		{%- endif -%}
+
+	</div>
 
 </div>

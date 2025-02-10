@@ -1,8 +1,14 @@
 ---
 ---
+
+{%- if entry.hide != "true" -%}
 <h2><b>{{ entry.title }}</b></h2>
 
 {{ reference }}
+
+
+{%- if include.included != true -%}
+{%- endif -%}
 
 <div class="bib-entry" id="{{key}}-materials">
 		{%- if entry.abstract -%}
@@ -36,3 +42,4 @@
 
 </div>
 <!-- <hr class='block-separator'> -->
+{%- endif -%}

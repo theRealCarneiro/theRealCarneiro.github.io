@@ -6,14 +6,16 @@ layout: default
 
 <div class="education">
   {%- if page.title -%}
-		<h1 class="page-heading">{{ page.title }}</h1>
+		{%- if include.included != true -%}
+			<h1 class="page-heading">{{ page.title }}</h1>
+		{%- endif -%}
   {%- endif -%}
 
-	{%- if site.education.size > 0 -%}
+	{%- if site.data.education.size > 0 -%}
 		<!-- <hr class='block-separator'> -->
 		<hr class='block-spacer'>
 
-		{%- assign education = site.education | sort: 'year' -%}
+		{%- assign education = site.data.education | sort: 'year' -%}
 		{%- for degree in education reversed -%}
 
 			{%- include list.html
@@ -22,6 +24,7 @@ layout: default
 				subtitle=degree.title
 				subsubtitle=degree.program
 				date=degree.year
+				gpa=degree.gpa
 				info=degree.description
 			-%}
 

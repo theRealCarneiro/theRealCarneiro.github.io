@@ -5,17 +5,31 @@ layout: default
 ---
 
 <div class="repos">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+	{%- if include.included != true -%}
+		{%- if page.title -%}
+			<h1 class="page-heading">{{ page.title }}</h1>
+		{%- endif -%}
   {%- endif -%}
 
-	{%- if site.repos.size > 0 -%}
+	{%- if site.data.repos.size > 0 -%}
 
 		<!-- <hr class='block-separator'> -->
-			<hr class='block-spacer'>
+		<hr class='block-spacer'>
 
-		{%- assign repos = site.repos -%}
-		{%- for repo in repos reversed -%}
+		{%- assign relevant_repos = site.data.repos | where_exp: "repo", "repo.tags contains 'relevant'" -%}
+		{%- assign irrelevant_repos = site.data.repos | reject: "tags", "relevant" -%}
+
+		{%- assign sorted_relevant = relevant_repos | sort: "year" | reverse -%}
+		{%- assign sorted_irrelevant = irrelevant_repos | sort: "year" | reverse -%}
+
+		{%- if include.relevant != true -%}
+			{%- assign repos = sorted_relevant | concat: sorted_irrelevant -%}
+		{%- else -%}
+			{%- assign repos = sorted_relevant -%}
+		{%- endif -%}
+
+
+		{%- for repo in repos -%}
 
 			{%- capture url_pretty -%}
 				therealcarneiro/{{ repo.name | slugify }}
@@ -27,8 +41,10 @@ layout: default
 				faicon='fa-brands fa-github fa-xl'
 				url=repo.link
 				url_pretty=url_pretty
+				comments=repo.comments
 				date=repo.year
 				info=repo.description
+				languages=repo.languages
 			-%}
 
 			<!-- <hr class='block-separator'> -->

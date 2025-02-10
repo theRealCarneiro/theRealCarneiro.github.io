@@ -1,0 +1,21 @@
+---
+title: Resume
+permalink: /resume/
+layout: default
+---
+
+<div class="container">
+	<div>
+		<h1>{{site.author.name}}<h1>
+		<h4>{{site.author.email}}<h4>
+
+		<h1 class="page-heading">Education</h1>
+		{% include_relative education.html included=true %}
+
+		<h1 class="page-heading">Projects</h1>
+		{% include_relative repos.html included=true relevant=true %}
+
+		<h1 class="page-heading">Publications</h1>
+		{% include_relative publications.html included=true %}
+	</div>
+</div>

@@ -23,3 +23,7 @@ h2.bibliography {
 	font-weight: 700;
 	padding-top: 10px;
 }
+
+li:empty {
+  display: none;
+}

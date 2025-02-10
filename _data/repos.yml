@@ -1,0 +1,98 @@
+- name: Alice Index
+  description: >
+    Alice Index is a Jekyll-based website created to index the files in the public HTML directories of users in the Wonderland Project. It organizes these files into categories, provides previews for certain file types, and displays relevant information for others, making it easier to browse and access user-shared content.
+  link: "https://git.alice.ufsj.edu.br/carneiro/alice_index"
+  year: 2023
+  layout: repo
+  languages:
+    - HTML
+    - PHP
+
+- name: Alice PPA
+  description: >
+    Alice PPA is part of the Wonderland Project. It is a PPA that contains packages and meta-packages designed to bootstrap and configure the computers in the Alice Arts Lab at UFSJ. Additionally, it provides the necessary packages for lab users to effectively carry out their work.
+  link: "https://git.alice.ufsj.edu.br/alice-meta-packages"
+  year: 2023
+  layout: repo
+  languages:
+    - Shell
+
+- name: Alien Power Control
+  description: >
+    Alien Power Control is a tool designed for Dell G15 users. It's a daemon and system tray utility that helps manage power modes on the device. With Alien Power Control, users can switch between different power settings easily, optimizing performance or conserving energy as required.
+  link: "https://github.com/theRealCarneiro/alien-power-control"
+  year: 2024
+  layout: repo
+  tags:
+    - relevant
+    - Open Source
+  languages:
+    - Python
+
+- name: Compose
+  description: >
+    A Docker Compose manager that eliminates the need to navigate into project directories. It also includes basic shell completions for Bash and Zsh.
+  link: "https://github.com/theRealCarneiro/compose"
+  year: 2024
+  layout: repo
+  languages:
+    - Shell
+
+- name: Fat16
+  description: >
+    This FAT16 implementation was developed as part of an assignment for an Operating Systems class. It includes core functionalities for managing files and directories, handling data allocation, and simulating basic file system operations. The project demonstrates key concepts of file system architecture, such as FAT table handling, and directory structure navigation.
+  link: "https://github.com/theRealCarneiro/fat-16"
+  year: 2020
+  layout: repo
+  languages:
+    - C
+
+- name: Minlau
+  description: >
+    Minlau is a Bash-based tool that provides a user-friendly command-line interface (CLI) for launching Wine applications and managing Wine prefixes seamlessly.
+  link: "https://github.com/theRealCarneiro/minlau"
+  year: 2021
+  layout: repo
+  languages:
+    - Shell
+
+- name: Predator Prey
+  description: >
+    This is a Predator-Prey simulation implemented in C using OpenMP, developed as part of an assignment for a Parallel Computing class. The core idea behind this implementation is to maintain a list of "wanted" grid cells—representing the target positions that creatures intend to move to. By leveraging parallelism, we efficiently process these movements, as conflicts only occur when multiple creatures attempt to move to the same grid cell. This approach optimizes performance while effectively handling movement conflicts in a concurrent environment.
+  link: "https://github.com/theRealCarneiro/predator-prey"
+  year: 2023
+  layout: repo
+  languages:
+    - C
+
+- name: Pulsemeeter
+  description: >
+    Pulsemeeter is an audio mixer designed for Linux users who need to manage audio setups efficiently. It offers a range of functionalities, including the creation of virtual audio devices and seamless routing of audio signals. Whether you're a musician, podcaster, or simply someone who values precise control over audio configurations, Pulsemeeter provides the tools necessary to optimize sound setups on the Linux platform.
+  link: "https://github.com/theRealCarneiro/pulsemeeter"
+  year: 2021
+  layout: repo
+  tags:
+    - relevant
+    - Open Source
+  comments:
+    - Over 400 stars on GitHub
+  languages:
+    - Python
+    - Shell
+
+- name: Stream Auth
+  description: >
+    Stream Auth is an application designed to handle authorization for the NGINX RTMP server. It uses LDAP as the authentication server, allowing secure and centralized user verification for self-hosted streaming services.
+  link: "https://git.alice.ufsj.edu.br/Carneiro/stream_auth"
+  year: 2023
+  layout: repo
+  languages:
+    - Python
+    - Shell
+
+- name: Wonderland
+  description: >
+    Wonderland is my master's degree project. Its goal is to provide the Alice Arts Lab at UFSJ with an integrated environment powered by self-hosted open-source services. It aims to offer unified authentication, personal file synchronization, centralized package and configuration management, and collaboration tools to enhance the lab's workflow and efficiency.
+  link: "https://wonderland.alice.ufsj.edu.br"
+  year: 2023
+  layout: repo
