@@ -1,0 +1,32 @@
+---
+---
+<!DOCTYPE html>
+<html data-theme="light" lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include head.html -%}
+  <body>
+
+		<style>
+			@media (prefers-color-scheme: dark) {
+				:root {
+						--color-foreground: var(--color-black);
+						--color-background: var(--color-white);
+						--color-separator: var(--color-light-grey);
+						--color-link: var(--color-blue);
+						--color-link-visited: var(--color-blue);
+						--color-button: var(--color-foreground);
+						--color-button-text: var(--color-background);
+						--color-brand: var(--color-light-grey);
+				}
+			}
+		</style>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+	</body>
+
+</html>
