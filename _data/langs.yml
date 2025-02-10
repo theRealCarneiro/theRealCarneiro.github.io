@@ -8,4 +8,6 @@
 - name: PHP
 - name: C#
 - name: HTML
+  show: false
 - name: Jekyll
+  show: false

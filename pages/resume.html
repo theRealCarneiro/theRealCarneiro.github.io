@@ -6,30 +6,36 @@ layout: default
 
 <div class="container">
 	<div>
-		<div class="list-container">
-			<div class="container-left">
-				<h1>{{site.author.name}}<h1>
-				<h4>{{site.author.email}}<h4>
+		<div style="display: flex">
+			<div style="flex: 1; ">
+				<h1>{{site.author.name}}</h1>
+				<h4>{{site.author.email}}</h4>
 				{%- if include.included == true -%}
-				<h4>{{site.author.phone}}<h4>
+				<h5>{{site.author.phone}}</h5>
 				{%- endif -%}
 			</div>
 
-			<div class="container-left">
-				<h1>Programming Languages<h1>
-				{%- for lang in site.data.languages -%}
-				{{ lang }}
-				{%- endfor -%}
+			<div style="flex: 1; ">
+				<h3>Programming Languages</h3>
+				{%- assign langs = site.data.langs | where_exp: "item", "item.show != false" -%}
+				<h5>{{ langs | map: "name" | join: ", " }}</h5>
 			</div>
 		</div>
+		<hr class='block-spacer'>
 
-		<h1 class="page-heading">Education</h1>
-		{% include_relative education.html included=true %}
+		<div style="margin-top: 40px;">
+			<h1 class="page-heading">Education</h1>
+			{% include_relative education.html included=true %}
+		</div>
 
-		<h1 class="page-heading">Projects</h1>
-		{% include_relative repos.html included=true relevant=true %}
+		<div style="margin-top: 40px;">
+			<h1 class="page-heading">Projects</h1>
+			{% include_relative repos.html included=true relevant=true %}
+		</div>
 
-		<h1 class="page-heading">Publications</h1>
-		{% include_relative publications.html included=true %}
+		<div style="margin-top: 40px;">
+			<h1 class="page-heading">Publications</h1>
+			{% include_relative publications.html included=true %}
+		</div>
 	</div>
 </div>
