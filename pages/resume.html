@@ -8,6 +8,9 @@ layout: default
 	<div>
 		<h1>{{site.author.name}}<h1>
 		<h4>{{site.author.email}}<h4>
+		{%- if include.included == true -%}
+		<h4>{{site.author.phone}}<h4>
+		{%- endif -%}
 
 		<h1 class="page-heading">Education</h1>
 		{% include_relative education.html included=true %}
