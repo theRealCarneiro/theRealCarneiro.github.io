@@ -21,6 +21,7 @@
 author:
   name: Gabriel Carneiro
   email: gabriel.chaves.carneiro@gmail.com
+  phone: "+55 31 98878-3072"
 
 title: Gabriel Carneiro
 email: gabriel.chaves.carneiro@gmail.com
@@ -46,6 +47,7 @@ header_pages:
   - pages/about.html
   - pages/publications.html
   - pages/education.html
+  - pages/resume.html
   - pages/repos.html
 
 collections_dir: collections
@@ -60,12 +62,12 @@ minima:
 
 collections:
   repos:
-    output: true
+    output: false
     sort_by: year
     permalink: /:collection/:name
 
   education:
-    output: true
+    output: false
     sort_by: start_year
     permalink: /:collection/:name
 
