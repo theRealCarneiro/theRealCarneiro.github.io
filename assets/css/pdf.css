@@ -35,6 +35,10 @@ body {
   width: 48%;
 }
 
+.education {
+	margin-bottom: 15px;
+}
+
 h1 {
   margin: 0 0 4px;
   font-size: 2em;
@@ -69,10 +73,10 @@ p, li {
   font-size: 1.1em;
   display: flex;
 }
-	.project .subtitle {
-		margin-top: 0px;
-		font-size: 0.95em;
-	}
+.project .subtitle {
+	margin-top: 0px;
+	font-size: 0.95em;
+}
 .language-icons {
   margin-left: 8px;
 }
@@ -84,21 +88,30 @@ p, li {
   vertical-align: middle;
 }
 .comments {
-  margin-left: 20px;
+  margin: 0px;
+  margin-bottom: 5px;
   list-style: disc;
 }
-	.lang-icon {
-	  margin-bottom: 7px;
-	  vertical-align: middle;
-	}
-	ol.bibliography li {
-		list-style-type: none;
-		padding-bottom: 5px;
-	}
-	h2.bibliography {
-		display: none;
-	}
-	li:empty {
-		display: none;
-	}
+.lang-icon {
+  margin-bottom: 7px;
+  vertical-align: middle;
+}
+
+.bibliography {
+  text-align: left;
+}
+
+ol.bibliography {
+	padding: 0;
+}
+ol.bibliography li {
+	list-style-type: none;
+	padding-bottom: 5px;
+}
+h2.bibliography {
+	display: none;
+}
+li:empty {
+	display: none;
+}
 

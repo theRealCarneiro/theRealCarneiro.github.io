@@ -1,3 +1,44 @@
+- name: Pulsemeeter
+  subtitle: An Open Source audio mixer built on Python, Gtk and Pulseaudio.
+  description: >
+    Pulsemeeter is an audio mixer designed for Linux users who need to manage audio setups efficiently. It offers a range of functionalities, including the creation of virtual audio devices and seamless routing of audio signals. Whether you're a musician, podcaster, or simply someone who values precise control over audio configurations, Pulsemeeter provides the tools necessary to optimize sound setups on the Linux platform.
+  link: "https://github.com/theRealCarneiro/pulsemeeter"
+  year: 2021
+  layout: repo
+  tags:
+    - relevant
+    - Open Source
+  comments:
+    - "Maintainer: Led the development of Pulsemeeter."
+    - "Achieved: Over 400 stars on GitHub"
+    - "Awarded: Recognized as the Best Project at the WOCTA Workshop at UFSJ"
+    - "Engineered: A real-time UI synchronization system using Unix sockets and Pulseaudio event listeners"
+    - "Merged: Over 50 merged PR's on GitHub"
+    - "Collaborated: Worked with developers worldwide, managing code reviews, issue tracking, and feature discussions."
+  languages:
+    - Python
+    - Shell
+
+- name: Wonderland
+  subtitle: My master's degree project. Provides the Alice Lab at UFSJ with an integrated environment powered by self-hosted open-source services.
+  description: >
+    Wonderland is my master's degree project. Its goal is to provide the Alice Arts Lab at UFSJ with an integrated environment powered by self-hosted open-source services. It aims to offer unified authentication, personal file synchronization, centralized package and configuration management, and collaboration tools to enhance the lab's workflow and efficiency.
+  link: "https://wonderland.alice.ufsj.edu.br"
+  year: 2024
+  layout: repo
+  comments:
+    - "Centralized: Authentication and Authorization for streamlined access control."
+    - "Developed: The infraestructure for a streaming platform integrated with LDAP that can be used with any RTMP client."
+    - "Automated: Lab computer setup using a meta-package–based PPA environment to configure and bootstrap systems with identical settings."
+    - "Collaboration: An designed for seamless collaboration and remote access to artifacts."
+  tags:
+    - relevant
+    - Open Source
+  languages:
+    - Python
+    - Shell
+    - PHP
+
 - name: Alice Index
   subtitle:
   description: >
@@ -62,7 +103,6 @@
   comments:
     - "Open source:"
   tags:
-    - relevant
     - Open Source
   layout: repo
   languages:
@@ -78,24 +118,6 @@
   languages:
     - C
 
-- name: Pulsemeeter
-  subtitle: An Open Source audio mixer built on Python, Gtk and Pulseaudio.
-  description: >
-    Pulsemeeter is an audio mixer designed for Linux users who need to manage audio setups efficiently. It offers a range of functionalities, including the creation of virtual audio devices and seamless routing of audio signals. Whether you're a musician, podcaster, or simply someone who values precise control over audio configurations, Pulsemeeter provides the tools necessary to optimize sound setups on the Linux platform.
-  link: "https://github.com/theRealCarneiro/pulsemeeter"
-  year: 2021
-  layout: repo
-  tags:
-    - relevant
-    - Open Source
-  comments:
-    - "Open Source:"
-    - "Over 400 stars on GitHub"
-    - "Over 50 merged PR's on GitHub"
-  languages:
-    - Python
-    - Shell
-
 - name: Stream Auth
   subtitle:
   description: >
@@ -106,23 +128,3 @@
   languages:
     - Python
     - Shell
-
-- name: Wonderland
-  subtitle: My master's degree project. Provides the Alice Lab at UFSJ with an integrated environment powered by self-hosted open-source services.
-  description: >
-    Wonderland is my master's degree project. Its goal is to provide the Alice Arts Lab at UFSJ with an integrated environment powered by self-hosted open-source services. It aims to offer unified authentication, personal file synchronization, centralized package and configuration management, and collaboration tools to enhance the lab's workflow and efficiency.
-  link: "https://wonderland.alice.ufsj.edu.br"
-  year: 2024
-  layout: repo
-  comments:
-    - "Centralized Authentication and Authorization."
-    - "Developed a streaming platform integrated with LDAP for authorization that can be used with any RTMP client."
-    - "Meta-package–based PPA environment to configure and bootstrap lab computers with identical settings."
-    - "Built for collaboration and remote accessing artifacts."
-  tags:
-    - relevant
-    - Open Source
-  languages:
-    - Python
-    - Shell
-    - PHP

@@ -4,16 +4,25 @@ permalink: /pdf/
 layout: pdf
 ---
 <div class="container">
-	<!-- Header Info: divided into left (personal info) and right (education) blocks -->
-	<div class="header-info">
-		{% include resume/author.html %}
-		<div>
-			<h2>Programming Languages</h2>
-			{%- assign langs = site.data.langs | where_exp: "item", "item.show != false" -%}
-			<p>{{ langs | map: "name" | join: ", " }}</p>
+		<div style="float: right; text-align: left">
+			<h2>Contact Info</h2>
+			<p>{{ site.author.email }}</p>
+			<p>{{ site.author.phone }}</p>
+			<br>
+			{% include social_links.html %}
+			<div class="languages" >
+				<h2>Programming Languages</h2>
+				{%- assign langs = site.data.langs | where_exp: "item", "item.show != false" -%}
+				<p>{{ langs | map: "name" | join: ", " }}</p>
+			</div>
 		</div>
-	</div>
+
+		<h1>{{ site.author.name }}</h1>
+
+
 	{% include resume/education.html %}
+
+
 	{% include resume/experience.html %}
 
 	{% include resume/project.html %}

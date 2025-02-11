@@ -1,5 +1,5 @@
 {%- for entry in site.data.social.social_links -%}
-		<a class='social-item'>
+		<a class='social-item' href="{{ entry.user_url}}" style="color: unset;">
 			<svg width=15 height=15>
 				<use xlink:href="{{- '/assets/minima-social-icons.svg#' | append: entry.platform | relative_url -}}"></use>
 			</svg>

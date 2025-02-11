@@ -4,9 +4,8 @@
   type: Extension Project
   subtitle: A multidisciplinary extension project focused on the city São João del-Rey.
   comments:
-    - "Indexed over 200 academic works about the city"
+    - "Indexed: Over 200 academic works about the city"
     - "Soft Skills: Enhanced communication and teamwork skills."
-    - ""
   languages:
     - Javascript
     - Typescript
@@ -19,9 +18,12 @@
   institution: Universidade Federal de São João del Rei (UFSJ)
   inst_abbrev: UFSJ
   type: Academic Research
-  subtitle: Enhanced Gluetube’s accessibility features.
+  subtitle: An online platform for creating digital art through audiovisual collages. Built with JavaScript, HTML, CSS, and the Bulma framework.
   comments:
-    - "Accessibility: adapted the UI according to accessibility standards"
+    - "Accessibility: adapted the UI according to accessibility standards."
+    - "Researched: Accessibility guidelines including WCAG and best practices to inform design decisions and improve user experience."
+    - "Adapted: The UI to comply with established accessibility standards, ensuring compatibility with assistive technologies."
+    - "Enhanced: Gluetube’s accessibility features to improve usability for diverse user needs."
   languages:
     - Javascript
   year: "2022 - 2022"
