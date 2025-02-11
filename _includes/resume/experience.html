@@ -5,13 +5,13 @@
 			<div class="project-title">
 				<p>{{ exp.name }}</p>
 				{% include lang_icon.html languages=exp.languages %}
-				<div style="margin-left: auto;">
+				<div style="margin-left: auto; text-align: right">
 					<p>{{ exp.type }}</p>
 					<p>{{ exp.year }}</p>
 				</div>
 			</div>
 
-			<p>{{ exp.subtitle }}</p>
+			<p class="subtitle">{{ exp.subtitle }}</p>
 			{% if exp.comments %}
 				<ul class="comments">
 					{% for comment in exp.comments %}

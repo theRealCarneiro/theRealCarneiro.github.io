@@ -1,0 +1,104 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+/* Remove any body background */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  background: none;
+  color: #333;
+}
+
+/* Force container to be exactly A4 dimensions */
+.container {
+  width: 210mm;
+  margin: 0 auto;
+  padding: 20mm;
+  background: #fff;
+  box-shadow: none;
+}
+
+/* Header info: two columns side by side */
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header-left,
+.header-right {
+  width: 48%;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 2em;
+  line-height: 1.2;
+}
+
+h2 {
+  margin: 8px 0 4px;
+  font-size: 1.3em;
+  border-bottom: 1px solid #ccc !important;
+  padding-bottom: 3px !important;
+}
+
+p, li {
+  margin: 2px 0;
+}
+
+/* Education items in the header-right */
+.education-item {
+  margin-bottom: 8px;
+}
+
+/* Projects Section */
+.section {
+  margin-bottom: 15px;
+}
+.project {
+  margin-bottom: 0px;
+}
+.project-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  display: flex;
+}
+	.project .subtitle {
+		margin-top: 0px;
+		font-size: 0.95em;
+	}
+.language-icons {
+  margin-left: 8px;
+}
+.language-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.comments {
+  margin-left: 20px;
+  list-style: disc;
+}
+	.lang-icon {
+	  margin-bottom: 7px;
+	  vertical-align: middle;
+	}
+	ol.bibliography li {
+		list-style-type: none;
+		padding-bottom: 5px;
+	}
+	h2.bibliography {
+		display: none;
+	}
+	li:empty {
+		display: none;
+	}
+

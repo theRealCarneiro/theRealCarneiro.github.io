@@ -1,131 +1,24 @@
 ---
 title: Resume
 permalink: /pdf/
-layout: none
+layout: pdf
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <title>{{ site.author.name }} – Resume</title>
-  <style>
-    /* Base styles for a compact, tight layout */
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      line-height: 1.2;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: 10px auto;
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    /* Header info: two columns side by side */
-    .header-info {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    .header-left,
-    .header-right {
-      width: 48%;
-    }
-    h1 {
-      margin: 0 0 4px;
-      font-size: 2em;
-      line-height: 1.2;
-    }
-    h2 {
-      margin: 8px 0 4px;
-      font-size: 1.3em;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 3px;
-    }
-    p, li {
-      margin: 2px 0;
-    }
-    /* Education items in the header-right */
-    .education-item {
-      margin-bottom: 8px;
-    }
-    /* Projects Section */
-    .section {
-      margin-bottom: 15px;
-    }
-    .project {
-      margin-bottom: 10px;
-    }
-    .project-title {
-      font-weight: bold;
-      font-size: 1.1em;
-      display: flex;
-      align-items: center;
-    }
-    .language-icons {
-      margin-left: 8px;
-    }
-    .language-icon {
-      width: 16px;
-      height: 16px;
-      display: inline-block;
-      margin-right: 4px;
-      vertical-align: middle;
-    }
-    .comments {
-      margin-left: 20px;
-      list-style: disc;
-    }
-	 .lang-icon {
-		  margin-bottom: 7px;
-			vertical-align: middle;
-		}
-		ol.bibliography li {
-			list-style-type: none;
-			padding-bottom: 20px;
-		}
-
-		ol.bibliography {
-		}
-
-		h2.bibliography {
-			// border-top: 3px dashed var(--color-separator);
-		}
-
-		h2.bibliography {
-			display: none;
-		}
-
-		li:empty {
-			display: none;
-		}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- Header Info: divided into left (personal info) and right (education) blocks -->
-    <div class="header-info">
-			{% include resume/author.html %}
-			<div>
-				<h2>Programming Languages</h2>
-				{%- assign langs = site.data.langs | where_exp: "item", "item.show != false" -%}
-				<p>{{ langs | map: "name" | join: ", " }}</p>
-			</div>
-    </div>
-		{% include resume/education.html %}
-		{% include resume/experience.html %}
-
-		{% include resume/project.html %}
-		<div id="article">
-			<h2>Publications</h2>
-			{% bibliography -T bib_resume --query @*[year>2021] %}
+<div class="container">
+	<!-- Header Info: divided into left (personal info) and right (education) blocks -->
+	<div class="header-info">
+		{% include resume/author.html %}
+		<div>
+			<h2>Programming Languages</h2>
+			{%- assign langs = site.data.langs | where_exp: "item", "item.show != false" -%}
+			<p>{{ langs | map: "name" | join: ", " }}</p>
 		</div>
-  </div>
-</body>
-</html>
+	</div>
+	{% include resume/education.html %}
+	{% include resume/experience.html %}
+
+	{% include resume/project.html %}
+	<div id="article">
+		<h2>Publications</h2>
+		{% bibliography -T bib_resume --query @*[year>2021] %}
+	</div>
+</div>
