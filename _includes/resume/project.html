@@ -1,0 +1,30 @@
+<div class="section" id="projects">
+	<h2>Projects</h2>
+	{%- assign repos = site.data.repos | sort: 'year' -%}
+	{% for repo in repos reversed %}
+		{% if repo.tags contains "relevant" %}
+			<div class="project">
+				<div class="project-title">
+					<p>{{ repo.name }}</p>
+					{% include lang_icon.html languages=repo.languages %}
+				</div>
+
+				<div>
+					<i id="{{ include.title | slugify }}-icon" class="fa-brands fa-github fa-lg list-icon"></i>
+					<a id="{{ include.title | slugify }}-url" href="{{ include.url }}">{{ include.url_pretty }}</a>
+					<a><small>theRealCarneiro/{{ repo.name }}</small></a>
+				</div>
+
+				<p>{{ repo.subtitle }}</p>
+				{% if repo.comments %}
+					<ul class="comments">
+						{% for comment in repo.comments %}
+							<li>{{ comment }}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+		{% endif %}
+	{% endfor %}
+</div>
+

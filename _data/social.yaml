@@ -1,4 +1,4 @@
 social_links:
-  - { platform: github, user_url: "https://github.com/theRealCarneiro" }
-  - { platform: linkedin, user_url: "https://www.linkedin.com/in/therealcarneiro/" }
-  - { platform: lattes, user_url: "http://lattes.cnpq.br/2090658657681256" }
+  - { platform: github, name_pretty: GitHub, user_url: "https://github.com/theRealCarneiro", url_pretty: "/theRealCarneiro" }
+  - { platform: linkedin, name_pretty: Linkedin, user_url: "https://www.linkedin.com/in/therealcarneiro/", url_pretty: "/in/therealcarneiro" }
+  - { platform: lattes, name_pretty: Lattes, user_url: "http://lattes.cnpq.br/2090658657681256", url_pretty: "/2090658657681256" }

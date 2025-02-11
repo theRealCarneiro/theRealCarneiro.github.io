@@ -1,0 +1,7 @@
+<span class="language-icons">
+	{%- for lang in include.languages -%}
+	<svg id="{{lang}}-icon" class="lang-icon" width=20 height=20 overflow="visible">
+			<use xlink:href="{{- '/assets/language-icons.svg#' | append: lang | relative_url -}}"></use>
+		</svg>
+	{%- endfor -%}
+</span>

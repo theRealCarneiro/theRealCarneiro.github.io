@@ -1,0 +1,26 @@
+<div class="section" id="projects">
+	<h2>Experience</h2>
+	{% for exp in site.data.experience %}
+		<div class="project">
+			<div class="project-title">
+				<p>{{ exp.name }}</p>
+				{% include lang_icon.html languages=exp.languages %}
+				<div style="margin-left: auto;">
+					<p>{{ exp.type }}</p>
+					<p>{{ exp.year }}</p>
+				</div>
+			</div>
+
+			<p>{{ exp.subtitle }}</p>
+			{% if exp.comments %}
+				<ul class="comments">
+					{% for comment in exp.comments %}
+						<li>{{ comment }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+	{% endfor %}
+</div>
+
+

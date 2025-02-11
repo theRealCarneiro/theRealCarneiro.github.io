@@ -70,3 +70,30 @@
 		max-width: 25%;
 	}
 }
+
+/* Force Mobile Layout (Overrides Both Global and Desktop Styles) */
+body.force-mobile .list-container {
+    flex-direction: column !important;
+    display: block !important;  /* Override display: flex if needed */
+}
+
+body.force-mobile .container-left {
+    text-align: center !important;
+    margin: 0 0 20px 0 !important;
+}
+
+body.force-mobile .container-right {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;  /* Override text-align: justify */
+    text-justify: none !important;  /* Disable justify behavior */
+    display: flex !important;       /* Change display if needed */
+    flex-direction: column !important;
+}
+
+/* Optional: Adjust for full-width content if needed */
+body.force-mobile .education-info,
+body.force-mobile .repos-info {
+    min-width: 100% !important;
+    max-width: 100% !important;
+}

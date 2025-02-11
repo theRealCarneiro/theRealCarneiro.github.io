@@ -1,23 +1,39 @@
-- title: Bachelor of Computer Science
-  institution: Universidade Federal de São João del Rei (UFSJ)
-  description: >
-  year: "2017 - 2022"
-  gpa: 3.26 (8.14/10)
-  start_year: 2017
-  end_year: 2022
-
 - title: Master of Computer Science
   institution: Universidade Federal de São João del Rei (UFSJ)
+  inst_abbrev: UFSJ
   program: Programa de Pós-Graduação em Ciência da Computação (PPGCC)
   gpa: 3.79 (9.48/10)
+  languages:
+    - Python
+    - C
+    - Shell
   description: >
   year: "2023 - Present"
   start_year: 2023
   end_year:
 
+- title: Bachelor of Computer Science
+  institution: Universidade Federal de São João del Rei (UFSJ)
+  inst_abbrev: UFSJ
+  description: >
+  year: "2017 - 2022"
+  gpa: 3.26 (8.14/10)
+  languages:
+    - C
+    - Python
+    - Typescript
+    - Javascript
+  start_year: 2017
+  end_year: 2022
+
 - title: Computer Technician
   institution: Instituto Federal de Minas Gerais (IFMG)
+  inst_abbrev: IFMG
   description: >
   year: "2014 - 2016"
+  languages:
+    - Java
+    - PHP
+    - C#
   start_year: 2014
   end_year: 2016

@@ -1,0 +1,10 @@
+<div class="header-right">
+	<h2>Education</h2>
+	{% for edu in site.data.education %}
+		<div class="education-item">
+			<p><strong>{{ edu.title }}</strong> – {{ edu.inst_abbrev }}{% include lang_icon.html languages=edu.languages %}</p>
+			<p>{{ edu.year }}{% if edu.gpa %} | <strong>GPA: {{ edu.gpa }}</strong>{% endif %}</p>
+		</div>
+	{% endfor %}
+</div>
+

@@ -6,21 +6,18 @@ layout: default
 
 <div class="container">
 	<div>
-		<div style="display: flex">
-			<div style="flex: 1; ">
-				<h1>{{site.author.name}}</h1>
-				<h4>{{site.author.email}}</h4>
-				{%- if include.included == true -%}
-				<h5>{{site.author.phone}}</h5>
-				{%- endif -%}
-			</div>
 
-			<div style="flex: 1; ">
-				<h3>Programming Languages</h3>
-				{%- assign langs = site.data.langs | where_exp: "item", "item.show != false" -%}
-				<h5>{{ langs | map: "name" | join: ", " }}</h5>
-			</div>
+		<div style="text-align: center;">
+			<h1>{{site.author.name}}</h1>
+			<h4>{{site.author.email}}</h4>
+			{%- if include.included == true -%}
+			<h5>{{site.author.phone}}</h5>
+			{%- endif -%}
+			<h3>Programming Languages</h3>
+			{%- assign langs = site.data.langs | where_exp: "item", "item.show != false" -%}
+			<h5>{{ langs | map: "name" | join: ", " }}</h5>
 		</div>
+
 		<hr class='block-spacer'>
 
 		<div style="margin-top: 40px;">

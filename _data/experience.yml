@@ -1,0 +1,29 @@
+- name: Observatório Urbano de São João del Rei
+  institution: Universidade Federal de São João del Rei (UFSJ)
+  inst_abbrev: UFSJ
+  type: Extension Project
+  subtitle: A multidisciplinary extension project focused on the city São João del-Rey.
+  comments:
+    - "Indexed over 200 academic works about the city"
+    - "Soft Skills: Enhanced communication and teamwork skills."
+    - ""
+  languages:
+    - Javascript
+    - Typescript
+    - Python
+  year: "2021 - 2022"
+  start_year: 2021
+  end_year: 2022
+
+- name: Gluetube
+  institution: Universidade Federal de São João del Rei (UFSJ)
+  inst_abbrev: UFSJ
+  type: Academic Research
+  subtitle: Enhanced Gluetube’s accessibility features.
+  comments:
+    - "Accessibility: adapted the UI according to accessibility standards"
+  languages:
+    - Javascript
+  year: "2022 - 2022"
+  start_year: 2022
+  end_year: 2022
